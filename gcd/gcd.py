@@ -8,7 +8,7 @@ def gcd():
     divisor = 0
     if len(numbers) < 2:
         print ("Enter two numbers to calculate GCD ")
-    if numbers[0] > numbers[1]:
+    if int(numbers[0]) > int(numbers[1]):
         dividend, divisor = int(numbers[0]), int(numbers[1])
     else:
         dividend, divisor = int(numbers[1]), int(numbers[0])
