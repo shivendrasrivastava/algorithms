@@ -5,21 +5,15 @@ from itertools import islice
 
 def main():
     n = int(input())
-    print (fibonacci_last(n))
-#    for k in islice(fibonacci_gen(n), n, n+1):
-#        k %= 10
-#        print (k)
-#        return k
-
-def fibonacci_last(n):
-    if n == 0 or n == 1:
-        return 1
-    return (fibonacci_last(n-1) + fibonacci_last(n-2)) % 10
+    for k in islice(fibonacci_gen(n), n, n+1):
+        #k %= 10
+        print (k)
+        return k
 
 def fibonacci_gen(n):
     a, b = 0, 1
     while True:
-        yield a
+        yield a % 10
         a, b = b, a+b
 
 if __name__ =="__main__":

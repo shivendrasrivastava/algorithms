@@ -46,5 +46,22 @@ class TestFibonacciLastDigit(unittest.TestCase):
     def test_fibonacci_10(self):
         self.assertEqual(main(), 5)
 
+    @patch('builtins.input', lambda: 354)
+    def test_fibonacci_11(self):
+        self.assertEqual(main(), 2)
+
+    @patch('builtins.input', lambda: 566)
+    def test_fibonacci_12(self):
+        self.assertEqual(main(), 3)
+
+    @patch('builtins.input', lambda: 5668)
+    def test_fibonacci_13(self):
+        self.assertEqual(main(), 1)
+
+    @patch('builtins.input', lambda: 8786)
+    def test_fibonacci_14(self):
+        self.assertEqual(main(), 3)
+
+
 if __name__ == "__main__":
     unittest.main()
